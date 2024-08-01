@@ -1,1 +1,1 @@
-[Product{id=392143425, name='Lou Dan Obseen', category='Baby', price=3.0266443655526665}, Product{id=722494324, name='Rhydon', category='Boys', price=9.723244812405829}, Product{id=353365335, name='Omastar', category='Boys', price=18.00979427995042}]
+[Product{id=200783611, name='Rocky Shore', category='Baby', price=999.6597609092346}, Product{id=623301870, name='Dodrio', category='Boys', price=996.6583487306042}, Product{id=712477374, name='I. M. Boring', category='Baby', price=994.0630415017276}]

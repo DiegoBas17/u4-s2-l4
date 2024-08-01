@@ -74,11 +74,8 @@ public class Application {
         listaOrdiniPerCliente.forEach((customer, orders) -> System.out.println("Cliente: " + customer.getName() + " : " + orders));
 
         System.out.println("-----------------------------------------------------es2-------------------------------------------");
-        Map<Customer, Double> totaleVedite = totalOrdersList.stream().collect(Collectors.groupingBy(Order::getCustomer, Collectors.summingDouble(order -> order.getProducts().stream()
-                        .mapToDouble(Product::getPrice)
-                        .sum()
-                )
-        ));
+        Map<Customer, Double> totaleVedite = totalOrdersList.stream().collect(Collectors.groupingBy(Order::getCustomer, Collectors.summingDouble(order -> order.getProducts()
+                .stream().mapToDouble(Product::getPrice).sum())));
         totaleVedite.forEach((costumer, totaleacquistato) -> System.out.println("Cliente: " + costumer.getName() + " : " + totaleacquistato));
 
         System.out.println("-----------------------------------------------------es3-------------------------------------------");
@@ -88,7 +85,7 @@ public class Application {
             products.add(productSupplierBook.get());
             products.add(productSupplierBoys.get());
         }
-        List<Product> prodottiCostosi = products.stream().sorted(Comparator.comparingDouble(Product::getPrice)).limit(3).toList();
+        List<Product> prodottiCostosi = products.stream().sorted(Comparator.comparingDouble(Product::getPrice).reversed()).limit(3).toList();
         prodottiCostosi.forEach(System.out::println);
         salvaProdottiSuDisco(prodottiCostosi);
 
