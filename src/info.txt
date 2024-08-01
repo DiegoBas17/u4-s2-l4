@@ -1,0 +1,1 @@
+[Product{id=392143425, name='Lou Dan Obseen', category='Baby', price=3.0266443655526665}, Product{id=722494324, name='Rhydon', category='Boys', price=9.723244812405829}, Product{id=353365335, name='Omastar', category='Boys', price=18.00979427995042}]
